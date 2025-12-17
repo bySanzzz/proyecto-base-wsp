@@ -21,7 +21,7 @@
 }
 
 body {
-  background-color: var(--primary-color);
+  background-image: url("https://i.redd.it/avcsz3r8sty51.png");
   padding: 40px;
 }
 
@@ -90,16 +90,13 @@ aside header {
 }
 
 .actions button:hover {
-  background-color: var(--grey-700);
+  
   transform: translateY(-4px);
 }
 
-/* search input */
+
 .search {
   background-color: var(--grey-800);
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   padding: 10px;
 }
 
@@ -115,7 +112,7 @@ aside header {
 }
 
 .search input:focus {
-  outline: 1px solid var(--grey-300);
+  outline: 1px solid var(--grey-300)
 }
 
 .chats ul {
@@ -141,7 +138,7 @@ aside header {
 .user-chat:hover {
   background-color: var(--grey-700);
   cursor: pointer;
-  border-left: 3px solid var(--green-400);
+  outline: 1px solid var(--grey-300);
 }
 
 /* messages panel */
