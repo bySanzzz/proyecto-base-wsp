@@ -21,8 +21,9 @@
 }
 
 body {
-  background-image: url("https://i.redd.it/avcsz3r8sty51.png");
+  background: linear-gradient(90deg, #013b17, #022e15);
   padding: 40px;
+  height: 100vh;
 }
 
 .app {
@@ -33,7 +34,7 @@ body {
   grid-template-columns: 320px 1fr;
   height: 90vh;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -101,14 +102,14 @@ aside header {
 }
 
 .search form input {
-  background-color: var(--grey-700);
+  background-color: var(--grey-200);
   width: 100%;
   display: block;
   border: none;
   padding: 10px;
   border-radius: 10px;
   outline: none;
-  color: white;
+  color: black;
 }
 
 .search input:focus {
@@ -123,11 +124,23 @@ aside header {
 }
 
 .user-chat {
-  background-color: var(--grey-900);
   display: flex;
   padding: 10px;
   align-items: center;
   gap: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 0.3s;
+}
+
+.user-chat:hover {
+  background-color: #dfdfe138;
+  cursor: pointer;
+  border-radius: 70px;
+}
+
+.user-chat:active {
+  outline: 1px solid var(--grey-200);
 }
 
 .user-chat img {
@@ -135,17 +148,10 @@ aside header {
   width: 50px;
 }
 
-.user-chat:hover {
-  background-color: var(--grey-700);
-  cursor: pointer;
-  outline: 1px solid var(--grey-300);
-}
-
 /* messages panel */
 
 .chat-header {
-  background-color: var(--grey-300);
-  border-bottom: 1px solid var(--grey-500);
+  background-color: var(--grey-900);
   display: flex;
   padding: 10px;
   align-items: center;
@@ -159,6 +165,10 @@ aside header {
 
 .chat-header p {
   color: var(--grey-700);
+}
+
+.chat-header h3 {
+  color: white;
 }
 
 /* messages styles */
@@ -176,19 +186,24 @@ aside header {
   flex-direction: column;
   gap: 20px;
   overflow-y: auto;
+  background-image: url("https://i.redd.it/avcsz3r8sty51.png");
 }
 
 
 .message {
-  background-color: var(--grey-300);
+  background-color: var(--grey-800);
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
   padding: 10px;
   width: 60%;
 }
 
+.message{
+  color: white;
+}
+
 .message .time {
-  color: var(--grey-700);
+  color: white;
   font-size: 14px;
   margin-top: 10px;
   text-align: end;
@@ -196,14 +211,14 @@ aside header {
 
 .me {
   align-self: end;
-  background-color: var(--green-100);
+  background-color: #0a5c33;
 }
 
 /* footer styles */
 
 footer {
   display: flex;
-  background-color: var(--grey-500);
+  background-color: var(--grey-900);
   align-items: center;
   justify-content: space-between;
   align-items: center;
@@ -226,12 +241,11 @@ footer .attach {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  color: var(--grey-700);
-  transition: color .2s;
+  color: var(--grey-300);
+  transition: transform .2s;
 }
-
 footer .attach:hover {
-  color: var(--grey-800);
+  transform: translateY(-4px);
 }
 
 footer form {
@@ -246,29 +260,27 @@ footer textarea {
   border-radius: 15px;
   width: 100%;
   border: none;
+  background-color: #121b22;
+  outline: 1px solid var(--grey-700)
 }
 
-footer textarea:focus {
-  outline: 1px solid var(--grey-700);
-  border: none;
+footer textarea {
+    color: white;
 }
 
 footer .send {
   background-color: #2dca7a;
   border: none;
   color: var(--grey-300);
-  width: 45px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 20px;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
-  transition: all .1s;
+  
 }
 
-footer .send:hover {
-  background-color: #138b80;
-  transform: scale(0.98);
-}
+
 
 /* responsive desing */
 @media (max-width:880px) {
