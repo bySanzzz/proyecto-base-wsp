@@ -21,7 +21,7 @@
 }
 
 body {
-  background: linear-gradient(90deg, #013b17, #022e15);
+  background-color: rgba(0, 0, 0, 0.938);
   padding: 40px;
   height: 100vh;
 }
@@ -34,6 +34,7 @@ body {
   grid-template-columns: 320px 1fr;
   height: 90vh;
   overflow: hidden;
+  outline: 3px solid black;
   border-radius: 30px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
@@ -41,7 +42,7 @@ body {
 /* aside styles */
 
 aside {
-  background-color: var(--grey-900);
+  background-color: var(--grey-800);
   color: white;
 }
 
@@ -99,6 +100,8 @@ aside header {
 .search {
   background-color: var(--grey-800);
   padding: 10px;
+  
+
 }
 
 .search form input {
@@ -110,11 +113,10 @@ aside header {
   border-radius: 10px;
   outline: none;
   color: black;
+  outline: 1px solid black;
 }
 
-.search input:focus {
-  outline: 1px solid var(--grey-300)
-}
+
 
 .chats ul {
   list-style: none;
@@ -131,6 +133,12 @@ aside header {
   margin-left: 10px;
   margin-right: 10px;
   transition: all 0.3s;
+}
+
+.user-chat p{
+  margin-top: 2px;
+  color: gray;
+  font-size: 14px;
 }
 
 .user-chat:hover {
@@ -214,6 +222,58 @@ aside header {
   background-color: #0a5c33;
 }
 
+.message-stikers {
+  background-color: var(--grey-800);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
+  padding: 10px;
+  width: 30%;
+}
+
+.message-stikers-me {
+  background-color: var(--grey-800);
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
+  padding: 10px;
+  width: 30%;
+  align-self: end;
+  background-color: #0a5c33;
+}
+
+.message-stikers-me .time  {
+  color: white;
+  font-size: 14px;
+  text-align: end;
+  margin-top: 2px;
+}
+
+.message-stikers .time  {
+  color: white;
+  font-size: 14px;
+  text-align: end;
+  margin-top: 2px;
+}
+.stikers {
+  width: 200px;
+  height: 200px;
+}
+.messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
 /* footer styles */
 
 footer {
@@ -279,8 +339,6 @@ footer .send {
   cursor: pointer;
   
 }
-
-
 
 /* responsive desing */
 @media (max-width:880px) {
