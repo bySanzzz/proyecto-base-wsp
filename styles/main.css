@@ -34,9 +34,7 @@ body {
   grid-template-columns: 320px 1fr;
   height: 90vh;
   overflow: hidden;
-  outline: 3px solid black;
-  border-radius: 30px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+  border: 2px solid #2a2a2a; 
 }
 
 /* aside styles */
@@ -44,7 +42,10 @@ body {
 aside {
   background-color: var(--grey-800);
   color: white;
+  border-right: 2px solid #2a2a2a; 
 }
+
+
 
 aside header {
   background-color: var(--grey-800);
@@ -69,6 +70,10 @@ aside header {
 
 .profile h2 {
   font-size: 22px;
+}
+
+.user-chat h4 {
+  font-weight: 400;
 }
 
 .actions {
@@ -129,10 +134,10 @@ aside header {
   display: flex;
   padding: 10px;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-left: 10px;
   margin-right: 10px;
-  transition: all 0.3s;
+  
 }
 
 .user-chat p{
@@ -144,22 +149,38 @@ aside header {
 .user-chat:hover {
   background-color: #dfdfe138;
   cursor: pointer;
-  border-radius: 70px;
+  border-radius: 8px;
+  
 }
 
 .user-chat:active {
-  outline: 1px solid var(--grey-200);
+  border-radius: 8px;
+  background-color: #dfdfe138;
 }
 
-.user-chat img {
+.user-chat > img {
   border-radius: 50%;
   width: 50px;
+}
+
+#check  {
+  max-width: 20px;
+}
+
+.mensaje-chat {
+  display: flex;
+  flex-direction: column;
+}
+
+.mensaje-footer {
+  display: flex;
+  gap: 1px;
 }
 
 /* messages panel */
 
 .chat-header {
-  background-color: var(--grey-900);
+  background-color: var(--grey-800);
   display: flex;
   padding: 10px;
   align-items: center;
@@ -194,14 +215,20 @@ aside header {
   flex-direction: column;
   gap: 20px;
   overflow-y: auto;
-  background-image: url("https://i.redd.it/avcsz3r8sty51.png");
+  background-image: url(/assets/fondo-chat.webp);
+  border-top: 2px solid #2a2a2a;
+  border-bottom: 2px solid #2a2a2a;
 }
 
+.me .time{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+} 
 
 .message {
   background-color: var(--grey-800);
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
   padding: 10px;
   width: 60%;
 }
@@ -223,28 +250,30 @@ aside header {
 }
 
 .message-stikers {
-  background-color: var(--grey-800);
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
   padding: 10px;
-  width: 30%;
+  max-width: 220px;
 }
 
+
 .message-stikers-me {
-  background-color: var(--grey-800);
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.238);
   padding: 10px;
-  width: 30%;
   align-self: end;
-  background-color: #0a5c33;
 }
 
 .message-stikers-me .time  {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 3px;
+  border-radius: 5px;
+  margin-left: 105px;
   color: white;
   font-size: 14px;
-  text-align: end;
   margin-top: 2px;
+  background-color: #0a5c33;
+
 }
 
 .message-stikers .time  {
@@ -252,11 +281,17 @@ aside header {
   font-size: 14px;
   text-align: end;
   margin-top: 2px;
+  background-color: var(--grey-800);
+  padding: 6px;
+  border-radius: 5px;
+  margin-left: 120px;
 }
 .stikers {
-  width: 200px;
+  max-width: 200px;
   height: 200px;
+  
 }
+
 .messages::-webkit-scrollbar {
   width: 6px;
 }
@@ -278,7 +313,7 @@ aside header {
 
 footer {
   display: flex;
-  background-color: var(--grey-900);
+  background-color: var(--grey-800);
   align-items: center;
   justify-content: space-between;
   align-items: center;
